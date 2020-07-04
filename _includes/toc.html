@@ -18,9 +18,6 @@ Get every page in the site and traverse them
 {% assign folder_pages = "" | split: ',' %}
 {% assign site_pages = site.html_pages %}
 {% for site_page in site_pages %}
-    {% if site_page.name == 'index.md' or site_page.name == 'index.html' %}
-        {% continue %}
-    {% endif %}
     {%- comment -%} 
     If folder_name is not passed in, assign all pages to this TOC
     {%- endcomment -%}
